@@ -1,0 +1,211 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Primary font */
+    color: #333; /* Improved readability */
+    font-size: 16px; /* Optimal for readability */
+    line-height: 1.6; /* Better spacing */
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Stylish font for headings */
+    font-weight: 600; /* Make headings bolder */
+}
+
+/* Buttons & Links */
+.btn, a {
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+}
+
+
+/* Hover Effect */
+.hover-effect {
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.hover-effect:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #343a40, #212529);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background: #343a40 !important;
+}
+
+.navbar-toggler {
+    font-size: 1.5rem;
+    color: white !important;
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Offcanvas Styling */
+.offcanvas-end {
+    width: 50% !important;
+}
+
+@media (max-width: 768px) {
+    .offcanvas {
+        width: 55% !important;
+        height: 100vh !important;
+    }
+}
+
+/* Gradient Text for Name */
+.gradient-text {
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2rem;
+}
+
+@media (max-width: 768px) {
+    .gradient-text {
+        font-size: 1.8rem;
+    }
+}
+
+/* About Description */
+.about-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Custom Badge Styling */
+.badge-custom {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.badge-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.custom-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Profile Picture with Glow Effect */
+.profile-pic {
+    border: 5px solid white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Skill Cards */
+.skill-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background: #212529;
+    color: white;
+    padding: 20px 0;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.back-to-top.show {
+    display: block;
+}
+
+/* Resume Button */
+.resume-btn {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.resume-btn:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 65, 108, 0.4);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller for mobile */
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}

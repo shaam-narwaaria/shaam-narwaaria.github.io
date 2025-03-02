@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shaam narwaaria - software engineer</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/bb22c81928.js" crossorigin="anonymous"></script>
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark bg-opacity-75 shadow-sm" style="backdrop-filter: blur(10px);">
+        <div class="container-fluid px-4">
+            <!-- Brand Name -->
+            <a class="navbar-brand fw-bold text-white" href="#hero">
+                <i class="fas fa-code me-2 text-primary"></i> SHAAM NARWAARIA
+            </a>
+
+            <!-- Toggle Button for Sidebar -->
+            <button class="navbar-toggler border-0 text-white p-2 fs-4" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i> <!-- Better Icon -->
+            </button>
+
+            <!-- Offcanvas Sidebar Menu (Fullscreen on Mobile) -->
+            <div class="offcanvas offcanvas-end offcanvas-md w-100 h-100 bg-dark text-white shadow-lg" tabindex="-1"
+                id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title fw-bold text-light" id="sidebarMenuLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column align-items-center">
+                    <ul class="navbar-nav w-100 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 rounded hover-effect" href="#about">
+                                <i class="fas fa-user me-2 text-info"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 rounded hover-effect" href="#projects">
+                                <i class="fas fa-laptop-code me-2 text-warning"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 rounded hover-effect" href="#skills">
+                                <i class="fas fa-cogs me-2 text-success"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 rounded hover-effect" href="#experience">
+                                <i class="fas fa-briefcase me-2 text-primary"></i> Experience
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 rounded hover-effect" href="#education">
+                                <i class="fas fa-graduation-cap me-2 text-danger"></i> Education
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-3 px-4 rounded hover-effect" href="#contact">
+                                <i class="fas fa-envelope me-2 text-light"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero bg-dark text-white d-flex align-items-center justify-content-center text-center"
+        style="min-height: 100vh; background: linear-gradient(135deg, #1e3c72, #2a5298);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">👋, I'm a Software
+                        Development Engineer</h1>
+                    <p class="lead mb-4 animate__animated animate__fadeInUp">
+                        Passionate about building scalable applications, solving complex problems, and crafting
+                        efficient solutions using modern technologies.
+                    </p>
+                    <a href="#about" class="btn btn-primary btn-lg mt-3 shadow-lg animate__animated animate__zoomIn"
+                        style="transition: all 0.3s ease-in-out;">
+                        Learn More
+                    </a>
+                    <a href="#contact"
+                        class="btn btn-outline-light btn-lg mt-3 ms-3 shadow-lg animate__animated animate__zoomIn"
+                        style="border-width: 2px; transition: all 0.3s ease-in-out;">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="container py-5 mt-5">
+        <div class="row justify-content-center align-items-center text-center text-md-start">
+            <!-- Profile Picture -->
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <div class="position-relative">
+                    <img src="profile.jpg" alt="Shambhoolal Narwaria"
+                        class="profile-pic img-fluid rounded-circle shadow-lg border border-3 border-primary"
+                        style="width: 200px; height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+                </div>
+            </div>
+
+            <!-- Introduction -->
+            <div class="col-md-8">
+                <h1 class="fw-bold text-primary display-5">Shambhoolal Narwaria</h1>
+                <p class="lead text-muted">Software Engineer | Full-Stack Developer | Problem Solver</p>
+                <p class="about-text">
+                    Passionate about building scalable and efficient software solutions.
+                    Proficient in <strong>Java, C++, JavaScript, React.js, and Spring Boot</strong>, with experience in
+                    <strong>cloud computing, microservices architecture, and system design.</strong>
+                </p>
+
+                <div class="">
+                    <span class="badge bg-primary shadow-sm">Full-Stack Development</span>
+                    <span class="badge bg-success shadow-sm">Cloud Computing</span>
+                    <span class="badge bg-warning text-dark shadow-sm">Data Structures & Algorithms</span>
+                    <span class="badge bg-danger shadow-sm">Spring Boot & Django</span>
+                    <span class="badge bg-info text-dark shadow-sm">AWS & MongoDB</span>
+                </div>
+                
+
+                <!-- Social & Resume Links -->
+                <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mt-4">
+                    <a href="https://github.com/shaam-narwaaria" class="btn btn-dark custom-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/shambhoolal-narwaria" class="btn btn-primary custom-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://drive.google.com/file/d/1gVaOX9lMJvzoSbsbrTJwuycdv-Y6-YRr/view?usp=sharing"
+                        class="resume-btn btn btn-danger btn-lg fw-bold px-4 shadow-lg" target="_blank">
+                        <i class="fas fa-file-download"></i> Download Resume
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold text-primary">Technical Skills</h2>
+        <div class="row text-center justify-content-center">
+            <!-- Programming Languages -->
+            <div class="col-md-4 mb-4">
+                <div class="card skill-card shadow-lg border-0 rounded-4 p-4">
+                    <div class="card-body">
+                        <h4 class="text-primary fw-bold">
+                            <i class="fas fa-code me-2"></i> Programming Languages
+                        </h4>
+                        <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge bg-dark">Java</span>
+                            <span class="badge bg-dark">C++</span>
+                            <span class="badge bg-dark">Python</span>
+                            <span class="badge bg-dark">JavaScript</span>
+                            <span class="badge bg-dark">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks & Libraries -->
+            <div class="col-md-4 mb-4">
+                <div class="card skill-card shadow-lg border-0 rounded-4 p-4">
+                    <div class="card-body">
+                        <h4 class="text-success fw-bold">
+                            <i class="fas fa-cogs me-2"></i> Frameworks & Libraries
+                        </h4>
+                        <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge bg-success">Spring Boot</span>
+                            <span class="badge bg-success">React.js</span>
+                            <span class="badge bg-success">Node.js</span>
+                            <span class="badge bg-success">Django</span>
+                            <span class="badge bg-success">Pandas</span>
+                            <span class="badge bg-success">NumPy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="col-md-4 mb-4">
+                <div class="card skill-card shadow-lg border-0 rounded-4 p-4">
+                    <div class="card-body">
+                        <h4 class="text-warning fw-bold">
+                            <i class="fas fa-tools me-2"></i> Tools & Technologies
+                        </h4>
+                        <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge bg-warning text-dark">Git</span>
+                            <span class="badge bg-warning text-dark">Docker</span>
+                            <span class="badge bg-warning text-dark">Postman</span>
+                            <span class="badge bg-warning text-dark">AWS (EC2, S3)</span>
+                            <span class="badge bg-warning text-dark">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Education Section -->
+    <section id="education" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold text-primary">Education</h2>
+        <div class="row justify-content-center">
+            <!-- IIT Roorkee -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">
+                            <i class="fas fa-university"></i> B.Tech in Computer Science
+                        </h4>
+                        <h5 class="card-subtitle mb-2 text-muted">
+                            <span class="font-weight-bold text-info" style="font-size: 1.2rem;">Indian Institute of Technology (IIT) Roorkee</span>
+                        </h5>
+                        <p class="card-text">2021 - 2025 | <strong>CGPA:</strong> 7.17/10.0</p>
+                        <p class="mb-0"><strong>Relevant Coursework:</strong> Data Structures, Algorithms, AI, ML, RDBMS, Cloud Computing</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- JNV Bundi -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"><i class="fas fa-school"></i> Class 12th</h4>
+                        <h5 class="card-subtitle mb-2 text-muted">Jawahar Navodaya Vidyalaya, Bundi, Rajasthan</h5>
+                        <p class="card-text">2020 - 2021 | <strong>Percentage:</strong> 94.0%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JNV Ujjain -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded-3 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"><i class="fas fa-school"></i> Class 10th</h4>
+                        <h5 class="card-subtitle mb-2 text-muted">Jawahar Navodaya Vidyalaya, Ujjain II, Madhya Pradesh
+                        </h5>
+                        <p class="card-text">2018 - 2019 | <strong>Percentage:</strong> 89.2%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold text-primary">Work Experience</h2>
+        <div class="row justify-content-center">
+            <div class="">
+                <!-- Experience Card -->
+                <div class="card shadow-lg border-0 rounded-3 p-4 mb-4">
+                    <div class="row g-3">
+                        <!-- Icon -->
+                        <div class="col-auto d-flex align-items-center">
+                            <i class="fas fa-briefcase fa-3x text-primary"></i>
+                        </div>
+                        <!-- Content -->
+                        <div class="col">
+                            <h4 class="mb-1 text-primary">Software Developer Intern</h4>
+                            <h5 class="text-muted">HawksCode Software Pvt. Ltd., Jaipur</h5>
+                            <p class="text-muted"><i class="far fa-calendar-alt"></i> Aug 2024 – Sep 2024</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="px-2">
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Implemented <strong>JWT and Bcrypt authentication</strong>, reducing unauthorized
+                                    access by 40%.</span>
+                            </li>
+                            <li class="d-flex align-items-start mt-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Refined <strong>MongoDB schemas</strong>, enhancing query performance and API
+                                    response.</span>
+                            </li>
+                            <li class="d-flex align-items-start mt-2">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <span>Optimized backend performance, reducing operational costs by
+                                    <strong>15%</strong>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold text-primary">Projects</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <!-- Psychometric Assessment Application -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="psychometric-thumbnail.jpg" class="card-img-top" alt="Psychometric Assessment"
+                        style="width: 100%; height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Psychometric Assessment Application</h5>
+                        <p class="card-text">Developed a gamified platform using React.js & Node.js for real-time
+                            psychometric evaluation, increasing engagement by 25%.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://psy-guage-frontend.vercel.app/" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-play-circle"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/shaam-narwaaria/Psychometric-Assessment-Application"
+                            class="btn btn-dark" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Text-to-Sign Language Translator -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="text-to-sign-thumbnail.jpg" class="card-img-top" alt="Text-to-Sign Language Translator"
+                        style="width: 100%; height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Text-to-Sign Language Translator</h5>
+                        <p class="card-text">Built a real-time text-to-ASL system using Django, NLP, and Machine
+                            Learning, enhancing accessibility for 1,000+ users.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://github.com/shaam-narwaaria/Text-to-Sign-Language-Translator" class="btn btn-dark"
+                            target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Web App - Koin -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="koin-thumbnail.jpg" class="card-img-top" alt="Koin - Social Media Web App"
+                        style="width: 100%; height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Social Media Web App - Koin</h5>
+                        <p class="card-text">Developed a real-time social media platform for 7,000+ students using
+                            React.js & Node.js, with optimized MongoDB queries for a 30% speed boost.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://github.com/shaam-narwaaria/Social-Media-Web-App-Koin-Frontend" class="btn btn-dark"
+                            target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reliable UDP Protocol -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="udp-thumbnail.jpg" class="card-img-top" alt="Reliable UDP Protocol"
+                        style="width: 100%; height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Reliable UDP Protocol - Network Communication</h5>
+                        <p class="card-text">Engineered a custom UDP protocol with Selective Repeat and Go-Back-N to
+                            improve packet reliability and network efficiency by 25%.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://github.com/shaam-narwaaria/Reliable-UDP-Protocol-Network-Communication"
+                            class="btn btn-dark" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold text-primary">Contact Me</h2>
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <div class="card shadow-sm p-4">
+                    <h4 class="mb-3">Get in Touch</h4>
+                    <p class="text-muted">
+                        <i class="fas fa-envelope text-primary me-2"></i>
+                        <a href="mailto:snarwaria195mb@gmail.com"
+                            class="text-dark text-decoration-none fw-semibold">snarwaria195mb@gmail.com</a>
+                    </p>
+                    <p class="text-muted">
+                        <i class="fas fa-phone text-success me-2"></i>
+                        <a href="tel:+917803054683" class="text-dark text-decoration-none fw-semibold">+91 78030
+                            54683</a>
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 mt-3">
+                        <a href="https://linkedin.com/in/shambhoolal-narwaria"
+                            class="btn btn-primary shadow-sm px-4 py-2 fw-bold"
+                            style="border-radius: 8px; transition: 0.3s;">
+                            <i class="fab fa-linkedin me-2"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/shaam-narwaaria" class="btn btn-dark shadow-sm px-4 py-2 fw-bold"
+                            style="border-radius: 8px; transition: 0.3s;">
+                            <i class="fab fa-github me-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-2">&copy; 2025 shaam narwaaria | Designed with ❤️</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="#about" class="text-white text-decoration-none">About</a></li>
+                <li class="list-inline-item"><a href="#projects" class="text-white text-decoration-none">Projects</a>
+                </li>
+                <li class="list-inline-item"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
