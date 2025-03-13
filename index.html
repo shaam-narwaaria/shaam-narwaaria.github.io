@@ -948,56 +948,288 @@
 
 
 
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2 class="experience-title">💼 WORK EXPERIENCE</h2>
+        <div class="experience-container">
 
-
-
-
-    <!-- Experience Section -->
-    <section id="experience" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold text-dark">WORK EXPERIENCE</h2>
-        <div class="row justify-content-center">
-            <div class="">
-                <!-- Experience Card -->
-                <div class="card shadow-lg border-0 rounded-3 p-4 mb-4">
-                    <div class="row g-3">
-                        <!-- Icon -->
-                        <div class="col-auto d-flex align-items-center">
-                            <i class="fas fa-briefcase fa-3x text-primary"></i>
-                        </div>
-                        <!-- Content -->
-                        <div class="col">
-                            <h4 class="mb-1 text-primary">Software Developer Intern</h4>
-                            <h5 class="text-muted">HawksCode Software Pvt. Ltd., Jaipur</h5>
-                            <p class="text-muted"><i class="far fa-calendar-alt"></i> Aug 2024 – Sep 2024</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="px-2">
-                        <ul class="list-unstyled">
-                            <li class="d-flex align-items-start">
-                                <i class="fas fa-check-circle text-success me-2"></i>
-                                <span>Implemented <strong>JWT and Bcrypt authentication</strong>, reducing unauthorized
-                                    access by 40%.</span>
-                            </li>
-                            <li class="d-flex align-items-start mt-2">
-                                <i class="fas fa-check-circle text-success me-2"></i>
-                                <span>Refined <strong>MongoDB schemas</strong>, enhancing query performance and API
-                                    response.</span>
-                            </li>
-                            <li class="d-flex align-items-start mt-2">
-                                <i class="fas fa-check-circle text-success me-2"></i>
-                                <span>Optimized backend performance, reducing operational costs by
-                                    <strong>15%</strong>.</span>
-                            </li>
-                        </ul>
+            <!-- Experience Card -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <i class="fas fa-briefcase experience-icon"></i>
+                    <div>
+                        <h3>Software Developer Intern</h3>
+                        <h4>HawksCode Software Pvt. Ltd., Jaipur</h4>
+                        <p><i class="far fa-calendar-alt"></i> Aug 2024 – Sep 2024</p>
                     </div>
                 </div>
+                <ul class="experience-details">
+                    <li><i class="fas fa-check-circle"></i> Implemented JWT & Bcrypt authentication, reducing unauthorized access by 40%.</li>
+                    <li><i class="fas fa-check-circle"></i> Refined MongoDB schemas, enhancing query performance and API response.</li>
+                    <li><i class="fas fa-check-circle"></i> Optimized backend performance, reducing operational costs by 15%. </li>
+                </ul>
             </div>
+
         </div>
     </section>
 
+    <!-- Custom CSS -->
+    <style>
+        /* Full-Screen Experience Section */
+        .experience-section {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1E3A8A, #121212);
+            padding: 60px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    <hr class="rounded custom-hr">
+        /* Title */
+        .experience-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00A9A5;
+            text-shadow: 0 0 15px rgba(0, 169, 165, 0.8);
+            margin-bottom: 30px;
+        }
+
+        /* Experience Container */
+        .experience-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Experience Card */
+        .experience-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0, 169, 165, 0.4);
+        }
+
+        /* Experience Header */
+        .experience-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+            color: #EAEAEA;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Adjust Text Styling */
+        .experience-header h3 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #00A9A5;
+        }
+
+        .experience-header h4 {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            color: #EAEAEA;
+        }
+
+        .experience-header p {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* Experience Icon */
+        .experience-icon {
+            font-size: 2rem;
+            color: #EAEAEA;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Experience Details */
+        .experience-details {
+            text-align: left;
+            color: #EAEAEA;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-details li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* List Icon */
+        .experience-details li i {
+            color: #00A9A5;
+        }
+
+        /* Hover Effect */
+        .experience-details li:hover {
+            transform: translateX(5px);
+            color: #FACC15;
+        }
+
+        /* 🔹 Fully Responsive Adjustments */
+        @media (max-width: 768px) {
+            .experience-title {
+                font-size: 2rem;
+            }
+
+            .experience-container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .experience-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .experience-header h3 {
+                font-size: 1.4rem;
+            }
+
+            .experience-header h4 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* 🔹 Mobile-Friendly Adjustments */
+        @media (max-width: 480px) {
+            .experience-title {
+                font-size: 1.8rem;
+            }
+
+            .experience-card {
+                padding: 20px;
+            }
+
+            .experience-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .experience-header h4 {
+                font-size: 1rem;
+            }
+
+            .experience-details li {
+                font-size: 0.9rem;
+            }
+
+            /* Stack Items Properly */
+            .experience-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .experience-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+
+
+        /* Experience Details */
+        .experience-details {
+            text-align: left;
+            color: #EAEAEA;
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            /* Adds spacing between points */
+        }
+
+        /* List Items */
+        .experience-details li {
+            display: flex;
+            align-items: flex-start;
+            /* Aligns text properly */
+            gap: 10px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease-in-out;
+            line-height: 1.6;
+            /* Increases readability */
+        }
+
+        /* List Icon */
+        .experience-details li i {
+            color: #00A9A5;
+            flex-shrink: 0;
+            /* Ensures icons don't affect text alignment */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .experience-details {
+                gap: 10px;
+            }
+
+            .experience-details li {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                flex-direction: column;
+                /* Stack icon & text on small screens */
+            }
+
+            .experience-details li i {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+                /* Adds spacing between icon & text */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .experience-details li {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .experience-details li i {
+                font-size: 1rem;
+            }
+        }
+    </style>
 
 
     <!-- Projects Section -->
