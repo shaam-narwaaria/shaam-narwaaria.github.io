@@ -85,201 +85,769 @@
         </div>
     </nav>
 
-
-
     <!-- Hero Section -->
-    <section id="hero" class="hero bg-dark text-white d-flex align-items-center justify-content-center text-center"
-        style="min-height: 100vh; background: linear-gradient(135deg, #0bd1d8, #07d3ea);">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">👋, I'm a Software
-                        Development Engineer</h1>
-                    <p class="lead mb-4 animate__animated animate__fadeInUp">
-                        Passionate about building scalable applications, solving complex problems, and crafting
-                        efficient solutions using modern technologies.
-                    </p>
-                    <a href="#about" class="btn btn-primary btn-lg mt-3 shadow-lg animate__animated animate__zoomIn"
-                        style="transition: all 0.3s ease-in-out;">
-                        Learn More
-                    </a>
-                </div>
-            </div>
+    <section id="hero">
+        <canvas id="hero-particles"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-glitch">👋 Hi, I'm <span class="hero-neon-text">Shambhoolal Narwaria</span></h1>
+            <h2><span id="hero-typing-text"></span><span class="hero-cursor">|</span></h2>
+            <p>
+                Crafting <span class="hero-highlight">high-performance applications</span>,
+                optimizing <span class="hero-highlight">system architecture</span>, and solving
+                <span class="hero-highlight">complex engineering challenges</span>.
+            </p>
+            <a href="#about" class="hero-btn-neon">Learn More</a>
         </div>
     </section>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Fullscreen Hero Section */
+        #hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 50%, rgba(11, 209, 216, 0.9), rgba(7, 211, 234, 0.7));
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Glowing Text */
+        .hero-neon-text {
+            color: #ffeb3b;
+            text-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+        }
+
+        /* Glitch Effect */
+        .hero-glitch {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: hero-glitch 1s infinite alternate;
+        }
+
+        @keyframes hero-glitch {
+            0% {
+                text-shadow: -5px 5px rgba(255, 59, 92, 0.7), 5px -5px rgba(59, 235, 255, 0.7);
+            }
+
+            100% {
+                text-shadow: 5px -5px rgba(255, 59, 92, 0.7), -5px 5px rgba(59, 235, 255, 0.7);
+            }
+        }
+
+        /* Cursor Animation */
+        .hero-cursor {
+            font-weight: bold;
+            color: #ffeb3b;
+            animation: hero-blink 0.7s infinite;
+        }
+
+        @keyframes hero-blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Typing Highlight */
+        .hero-highlight {
+            font-weight: bold;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        /* Floating Animation */
+        .hero-content {
+            position: absolute;
+            z-index: 2;
+            color: #fff;
+            animation: hero-float 3s infinite ease-in-out;
+        }
+
+        @keyframes hero-float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Neon Button */
+        .hero-btn-neon {
+            background: linear-gradient(135deg, #ffeb3b, #ffa500);
+            color: #000;
+            padding: 15px 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 235, 59, 0.6);
+        }
+
+        .hero-btn-neon:hover {
+            background: linear-gradient(135deg, #ffa500, #ff6ec4);
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.8);
+        }
+
+        /* Background Particles */
+        #hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
 
 
 
     <!-- About Section -->
-    <section id="about" class="container py-5 mt-5">
-        <div class="row justify-content-center align-items-center text-center text-md-start">
-            <!-- Profile Picture -->
-            <div class="col-md-4 text-center mb-4 mb-md-0">
-                <div class="position-relative">
-                    <img src="profile.jpg" alt="Shambhoolal Narwaria"
-                        class="profile-pic img-fluid rounded-circle shadow-lg border border-3 border-primary"
-                        style="width: 200px; height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
-                </div>
+    <section id="about" class="about-section">
+        <div class="about-background"></div> <!-- Dynamic Background -->
+        <div class="about-content">
+            <div class="about-profile">
+                <img src="profile.jpg" alt="Shambhoolal Narwaria">
             </div>
-
-            <!-- Introduction -->
-            <div class="col-md-8">
-                <h1 class="fw-bold text-primary display-5">Shambhoolal Narwaria</h1>
-                <p class="lead text-muted">Software Engineer | Full-Stack Developer | Problem Solver</p>
+            <div class="about-info">
+                <h1 class="about-title">👋 Hi, I'm <span class="about-highlight">Shambhoolal Narwaria</span></h1>
+                <p class="about-subtitle">Software Engineer | Full-Stack Developer | Cloud Enthusiast</p>
                 <p class="about-text">
-                    Passionate about building scalable and efficient software solutions.
-                    Proficient in <strong>Java, C++, JavaScript, React.js, and Spring Boot</strong>, with experience in
-                    <strong>cloud computing, microservices architecture, and system design.</strong>
+                    Passionate about crafting <span class="about-highlight">high-performance applications</span>,
+                    optimizing <span class="about-highlight">system architecture</span>, and solving
+                    <span class="about-highlight">complex engineering challenges</span>.
                 </p>
 
-                <div class="">
-                    <span class="badge bg-primary shadow-sm">Full-Stack Development</span>
-                    <span class="badge bg-success shadow-sm">Cloud Computing</span>
-                    <span class="badge bg-warning text-dark shadow-sm">Data Structures & Algorithms</span>
-                    <span class="badge bg-danger shadow-sm">Spring Boot & Django</span>
-                    <span class="badge bg-info text-dark shadow-sm">AWS & MongoDB</span>
+                <!-- Animated Skill Badges -->
+                <div class="about-skills">
+                    <span class="about-skill">Full-Stack Development</span>
+                    <span class="about-skill">Cloud Computing</span>
+                    <span class="about-skill">Data Structures & Algorithms</span>
+                    <span class="about-skill">Spring Boot & Django</span>
+                    <span class="about-skill">AWS & MongoDB</span>
                 </div>
 
-
-                <!-- Social & Resume Links -->
-                <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mt-4">
-                    <!-- <a href="https://github.com/shaam-narwaaria" class="btn btn-dark custom-btn">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/shambhoolal-narwaria" class="btn btn-primary custom-btn">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a> -->
-
-                    <a href="https://drive.google.com/file/d/1gVaOX9lMJvzoSbsbrTJwuycdv-Y6-YRr/view?usp=sharing"
-                        class="resume-btn btn btn-danger btn-lg fw-bold px-4 shadow-lg border border-3 border-black"
-                        target="_blank">
-                        <i class="fas fa-file-download"></i> DOWNLOAD RESUME
-                    </a>
-
-
-                </div>
-
+                <!-- Resume Button -->
+                <a href="https://drive.google.com/file/d/1gVaOX9lMJvzoSbsbrTJwuycdv-Y6-YRr/view?usp=sharing"
+                    class="about-resume-btn" target="_blank">
+                    <i class="fas fa-file-download"></i> DOWNLOAD RESUME
+                </a>
             </div>
         </div>
     </section>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Full-Screen About Section */
+        .about-section {
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0A192F, #112240);
+            padding: 60px 20px;
+            /* Adds padding to avoid content touching edges */
+        }
+
+        /* Animated Background */
+        .about-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(100, 255, 218, 0.15), rgba(10, 25, 47, 0.9));
+            opacity: 0.5;
+            animation: aboutBgAnimation 10s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes aboutBgAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* About Content Layout */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            color: #CCD6F6;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* Profile Image */
+        .about-profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #64FFDA;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+            animation: aboutFloat 3s infinite ease-in-out;
+        }
+
+        @keyframes aboutFloat {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Title & Subtitle */
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .about-highlight {
+            color: #64FFDA;
+            text-shadow: 0 0 15px rgba(100, 255, 218, 0.8);
+        }
+
+        .about-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* About Text */
+        .about-text {
+            font-size: 1rem;
+            max-width: 800px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Skill Badges */
+        .about-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .about-skill {
+            background: rgba(100, 255, 218, 0.1);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .about-skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Resume Button */
+        .about-resume-btn {
+            background: linear-gradient(135deg, #F4A261, #E76F51);
+            color: #000;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .about-resume-btn:hover {
+            background: linear-gradient(135deg, #E76F51, #F4A261);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(244, 162, 97, 0.8);
+        }
+
+        /* Responsive Layout Adjustments */
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .about-subtitle {
+                font-size: 1rem;
+            }
+
+            .about-text {
+                font-size: 0.9rem;
+            }
+
+            .about-profile img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* Prevent Content Overlap on Small Screens */
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 80px 15px;
+                /* More padding to prevent content from touching edges */
+                min-height: 110vh;
+                /* Increases height for smaller screens */
+            }
+
+            .about-content {
+                padding: 10px;
+            }
+
+            .about-title {
+                font-size: 1.8rem;
+            }
+
+            .about-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .about-text {
+                font-size: 0.85rem;
+            }
+
+            .about-skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: center;
+            }
+
+            .about-skill {
+                font-size: 0.8rem;
+                padding: 8px 10px;
+            }
+
+            .about-resume-btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 
 
 
     <!-- Skills Section -->
-    <section id="skills" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold text-dark">TECHNICAL SKILLS</h2>
-        <div class="row text-center justify-content-center">
+    <section id="skills" class="skills-section">
+        <h2 class="skills-title">🚀 TECHNICAL SKILLS</h2>
+        <div class="skills-container">
             <!-- Programming Languages -->
-            <div class="col-md-4 mb-4">
-                <div class="card skill-card shadow-lg border-0 rounded-4 p-4">
-                    <div class="card-body">
-                        <h4 class="text-primary fw-bold">
-                            <i class="fas fa-code me-2"></i> Programming Languages
-                        </h4>
-                        <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
-                            <span class="badge bg-dark">Java</span>
-                            <span class="badge bg-dark">C++</span>
-                            <span class="badge bg-dark">Python</span>
-                            <span class="badge bg-dark">JavaScript</span>
-                            <span class="badge bg-dark">SQL</span>
-                        </div>
-                    </div>
+            <div class="skill-card">
+                <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                <div class="skill-list">
+                    <span>Java</span>
+                    <span>C++</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+                    <span>TypeScript</span>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-card">
+                <h4><i class="fas fa-database"></i> Databases</h4>
+                <div class="skill-list">
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>PostgreSQL</span>
                 </div>
             </div>
 
             <!-- Frameworks & Libraries -->
-            <div class="col-md-4 mb-4">
-                <div class="card skill-card shadow-lg border-0 rounded-4 p-4">
-                    <div class="card-body">
-                        <h4 class="text-success fw-bold">
-                            <i class="fas fa-cogs me-2"></i> Frameworks & Libraries
-                        </h4>
-                        <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
-                            <span class="badge bg-success">Spring Boot</span>
-                            <span class="badge bg-success">React.js</span>
-                            <span class="badge bg-success">Node.js</span>
-                            <span class="badge bg-success">Django</span>
-                            <span class="badge bg-success">Pandas</span>
-                            <span class="badge bg-success">NumPy</span>
-                        </div>
-                    </div>
+            <div class="skill-card">
+                <h4><i class="fas fa-cogs"></i> Frameworks & Libraries</h4>
+                <div class="skill-list">
+                    <span>Spring Boot</span>
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>Django</span>
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                </div>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-card">
+                <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                <div class="skill-list">
+                    <span>AWS (EC2, S3, Lambda)</span>
+                    <span>Docker</span>
+                    <span>CI/CD</span>
+                    <span>Kubernetes</span>
+                </div>
+            </div>
+
+            <!-- System Design & Performance -->
+            <div class="skill-card">
+                <h4><i class="fas fa-project-diagram"></i> System Design & Performance</h4>
+                <div class="skill-list">
+                    <span>Microservices</span>
+                    <span>RESTful APIs</span>
+                    <span>Multithreading</span>
+                    <span>Concurrency</span>
                 </div>
             </div>
 
             <!-- Tools & Technologies -->
-            <div class="col-md-4 mb-4">
-                <div class="card skill-card shadow-lg border-0 rounded-4 p-4">
-                    <div class="card-body">
-                        <h4 class="text-warning fw-bold">
-                            <i class="fas fa-tools me-2"></i> Tools & Technologies
-                        </h4>
-                        <div class="mt-3 d-flex flex-wrap gap-2 justify-content-center">
-                            <span class="badge bg-warning text-dark">Git</span>
-                            <span class="badge bg-warning text-dark">Docker</span>
-                            <span class="badge bg-warning text-dark">Postman</span>
-                            <span class="badge bg-warning text-dark">AWS (EC2, S3)</span>
-                            <span class="badge bg-warning text-dark">MongoDB</span>
-                        </div>
-                    </div>
+            <div class="skill-card">
+                <h4><i class="fas fa-tools"></i> Tools & Technologies</h4>
+                <div class="skill-list">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Postman</span>
+                    <span>Linux</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Custom CSS -->
+    <style>
+        /* Full-Screen Skills Section */
+        .skills-section {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0A192F, #112240);
+            padding: 60px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    <hr class="rounded custom-hr">
+        /* Title */
+        .skills-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #64FFDA;
+            text-shadow: 0 0 15px rgba(100, 255, 218, 0.8);
+            margin-bottom: 30px;
+        }
+
+        /* Skills Container */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Skill Cards */
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(100, 255, 218, 0.3);
+        }
+
+        .skill-card h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #CCD6F6;
+            margin-bottom: 15px;
+        }
+
+        /* Skill List */
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill-list span {
+            background: rgba(100, 255, 218, 0.1);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #64FFDA;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.8);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .skill-list span:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .skills-title {
+                font-size: 2rem;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-title {
+                font-size: 1.8rem;
+            }
+
+            .skill-card {
+                padding: 20px;
+            }
+
+            .skill-card h4 {
+                font-size: 1.3rem;
+            }
+
+            .skill-list span {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
 
 
     <!-- Education Section -->
-    <section id="education" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold text-dark">EDUCATION</h2>
-        <div class="row justify-content-center">
+    <section id="education" class="education-section">
+        <h2 class="education-title">🎓 EDUCATION</h2>
+        <div class="education-timeline">
+
             <!-- IIT Roorkee -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-lg border-0 rounded-3 h-100">
-                    <div class="card-body">
-                        <h4 class="card-title text-primary">
-                            <i class="fas fa-university"></i> B.Tech in Computer Science
-                        </h4>
-                        <h5 class="card-subtitle mb-2 text-muted">
-                            <span class="font-weight-bold text-info" style="font-size: 1.2rem;">Indian Institute of
-                                Technology (IIT) Roorkee</span>
-                        </h5>
-                        <p class="card-text">2021 - 2025 | <strong>CGPA:</strong> 7.17/10.0</p>
-                        <p class="mb-0"><strong>Relevant Coursework:</strong> Data Structures, Algorithms, AI, ML,
-                            RDBMS, Cloud Computing</p>
-                    </div>
+            <div class="education-card">
+                <div class="education-icon"><i class="fas fa-university"></i></div>
+                <div class="education-content">
+                    <h3>B.Tech in Computer Science</h3>
+                    <h4>Indian Institute of Technology (IIT) Roorkee</h4>
+                    <p>2021 - 2025 | <strong>CGPA:</strong> 8.17/10.0</p>
+                    <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, AI, ML, RDBMS, Cloud Computing
+                    </p>
                 </div>
             </div>
 
-
             <!-- JNV Bundi -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-lg border-0 rounded-3 h-100">
-                    <div class="card-body">
-                        <h4 class="card-title text-primary"><i class="fas fa-school"></i> Class 12th</h4>
-                        <h5 class="card-subtitle mb-2 text-muted">Jawahar Navodaya Vidyalaya, Bundi, Rajasthan</h5>
-                        <p class="card-text">2020 - 2021 | <strong>Percentage:</strong> 94.0%</p>
-                    </div>
+            <div class="education-card">
+                <div class="education-icon"><i class="fas fa-school"></i></div>
+                <div class="education-content">
+                    <h3>Class 12th (Science - PCM)</h3>
+                    <h4>Jawahar Navodaya Vidyalaya, Bundi, Rajasthan</h4>
+                    <p>2020 - 2021 | <strong>Percentage:</strong> 94.0%</p>
                 </div>
             </div>
 
             <!-- JNV Ujjain -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-lg border-0 rounded-3 h-100">
-                    <div class="card-body">
-                        <h4 class="card-title text-primary"><i class="fas fa-school"></i> Class 10th</h4>
-                        <h5 class="card-subtitle mb-2 text-muted">Jawahar Navodaya Vidyalaya, Ujjain II, Madhya Pradesh
-                        </h5>
-                        <p class="card-text">2018 - 2019 | <strong>Percentage:</strong> 89.2%</p>
-                    </div>
+            <div class="education-card">
+                <div class="education-icon"><i class="fas fa-school"></i></div>
+                <div class="education-content">
+                    <h3>Class 10th</h3>
+                    <h4>Jawahar Navodaya Vidyalaya, Ujjain II, Madhya Pradesh</h4>
+                    <p>2018 - 2019 | <strong>Percentage:</strong> 89.2%</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Custom CSS -->
+    <style>
+        /* Full-Screen Education Section */
+        .education-section {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1E3A8A, #374151);
+            /* Deep Blue to Soft Gray */
+            padding: 60px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    <hr class="rounded custom-hr">
+        /* Title */
+        .education-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FACC15;
+            /* Soft Gold */
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.8);
+            margin-bottom: 30px;
+        }
+
+        /* Timeline */
+        .education-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Education Card */
+        .education-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(250, 204, 21, 0.3);
+        }
+
+        /* Education Icon */
+        .education-icon {
+            font-size: 2rem;
+            color: #FACC15;
+            /* Soft Gold */
+            background: rgba(250, 204, 21, 0.1);
+            padding: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+        }
+
+        /* Education Content */
+        .education-content {
+            text-align: left;
+            color: #E5E7EB;
+            /* Neutral White */
+        }
+
+        .education-content h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .education-content h4 {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .education-content p {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin: 5px 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .education-title {
+                font-size: 2rem;
+            }
+
+            .education-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .education-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .education-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .education-content h4 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education-title {
+                font-size: 1.8rem;
+            }
+
+            .education-card {
+                padding: 15px;
+            }
+
+            .education-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .education-content h4 {
+                font-size: 0.95rem;
+            }
+
+            .education-content p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+
+
+
+
+
 
 
     <!-- Experience Section -->
